@@ -1,1 +1,3 @@
 This is my second test file in git
+
+I just created a new branch and this is my first change
