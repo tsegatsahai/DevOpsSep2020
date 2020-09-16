@@ -1,10 +1,28 @@
 package com.tsega;
 
+import java.util.Arrays;
+import java.util.List;
+
 public class Vowels {
-    
+    String word;
+    List<Character> vowels;
+
+    public Vowels(String word) {
+        this.word = word;
+        vowels = Arrays.asList('a', 'e', 'i', 'o', 'u');
+
+    }
+
+    public int findVowels(){
+        int numOfVowels = 0;
+        word = word.toLowerCase();
+        for(int i = 0; i < word.length(); i++){
+            if(vowels.contains(word.charAt(i))){
+                numOfVowels ++;
+            }
+        }
+       return numOfVowels;
+    }
 }
 
-//    Create Vowels class in JAVA and Vowels branch in GIT then do the following:
-//        - Count all the vowels in a sentence and display the count
-//        - Push Vowels class to Vowels branch in git
-//          - Merge Vowels branch changes into the repository
+
