@@ -13,8 +13,16 @@ public class Main {
         String word = scanner.nextLine();
 
         Vowels vowels = new Vowels(word);
+        Palindrome palindrome = new Palindrome(word);
 
-        System.out.println("The number of vowels in '" + word + "' is: ");
-        System.out.println(vowels.findVowels());
+        System.out.println("The number of vowels in '" + word + "' is " + vowels.findVowels());
+
+
+        if(palindrome.isPalindrome()){
+            System.out.println("'" + word + "' is a palindrome");
+        }else {
+            System.out.println("'" + word + "' is not a palindrome");
+        }
+
     }
 }
