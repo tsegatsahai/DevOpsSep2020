@@ -15,8 +15,9 @@ public class Main {
         Vowels vowels = new Vowels(phrase);
         Palindrome palindrome = new Palindrome(phrase);
         Word word = new Word(phrase);
+        Consonants consonants = new Consonants(phrase);
 
-        System.out.println("The number of vowels in '" + phrase + "' is " + vowels.findVowels());
+        System.out.println("The number of vowels in '" + phrase + "' is: " + vowels.findVowels());
 
         if(palindrome.isPalindrome()){
             System.out.println("'" + phrase + "' is a palindrome");
@@ -26,6 +27,8 @@ public class Main {
 
         System.out.println("The number of words in '" + phrase + "' is: " + word.numOfWords());
 
+        System.out.println("The number of consonants in '" + phrase + "' : " + consonants.numOfConsonants());
+        System.out.println("--> " + consonants.getNewWord());
 
     }
 }

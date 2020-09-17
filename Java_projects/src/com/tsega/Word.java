@@ -12,9 +12,9 @@ public class Word {
         int counter = 1;
         word = word.trim(); //to get rid of trailing spaces
         for(int i = 0; i < word.length(); i++){
-            if(word.charAt(i) == ' '){
+            if(!Character.isLetter(word.charAt(i))){
                 if((i+1) < word.length()){
-                    if(word.charAt(i+1) == ' '){
+                    if(!Character.isLetter(word.charAt(i+1))){
                         continue;
                     }
                 }
