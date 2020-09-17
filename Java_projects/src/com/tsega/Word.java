@@ -5,11 +5,11 @@ import java.util.ArrayList;
 
 public class Word {
     String word;
-    ArrayList<String> testWords;
+    ArrayList<String> words;
 
     public Word(String word) {
         this.word = word;
-        this.testWords = new ArrayList<String>();
+        this.words = new ArrayList<String>();
     }
 
     public int numOfWords(){
@@ -19,8 +19,7 @@ public class Word {
             if(Character.isLetter(word.charAt(i))){
                 dummyWord += word.charAt(i);
                 if(i == word.length() - 1){
-                    testWords.add(dummyWord);
-                    //System.out.println(dummyWord);
+                    words.add(dummyWord);
                 }
             }else{
                 if((i+1) < word.length()){
@@ -28,10 +27,10 @@ public class Word {
                         continue;
                     }
                 }
-                testWords.add(dummyWord);
+                words.add(dummyWord);
                 dummyWord = "";
             }
         }
-        return testWords.size();
+        return words.size();
     }
 }
