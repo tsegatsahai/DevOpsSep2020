@@ -1,5 +1,6 @@
 package com.tsega;
 
+import java.util.ArrayList;
 import java.util.Scanner;
 /*
 * @author = tsegatsahai
@@ -16,6 +17,7 @@ public class Main {
         Palindrome palindrome = new Palindrome(phrase);
         Word word = new Word(phrase);
         Consonants consonants = new Consonants(phrase);
+        LastLetterCount lastLetterCount = new LastLetterCount(phrase);
 
         System.out.println("The number of vowels in '" + phrase + "' is: " + vowels.findVowels());
 
@@ -29,6 +31,11 @@ public class Main {
 
         System.out.println("The number of consonants in '" + phrase + "' : " + consonants.numOfConsonants());
         System.out.println("--> " + consonants.getNewWord());
+
+        System.out.println("Phrase after rearrangement:\n" + "\t---> "+ lastLetterCount.switchWords() );
+        System.out.println("Number of words that end with 's': " + lastLetterCount.getsWords());
+        System.out.println("Number of words that end with 'y': " + lastLetterCount.getyWords());
+
 
     }
 }
