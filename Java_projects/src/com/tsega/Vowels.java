@@ -9,7 +9,7 @@ public class Vowels {
 
     public Vowels(String word) {
         this.word = word;
-        vowels = Arrays.asList('a', 'e', 'i', 'o', 'u');
+        this.vowels = Arrays.asList('a', 'e', 'i', 'o', 'u');
 
     }
 

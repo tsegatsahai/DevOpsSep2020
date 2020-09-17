@@ -1,16 +1,20 @@
 package com.tsega;
 
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 
 public class LastLetterCount {
     String word;
     ArrayList<String> words;
+    List<Character> specialCharExceptions;
     int sWords;
     int yWords;
 
     public LastLetterCount(String word) {
         this.word = word;
         this.words = new ArrayList<String>();
+        this.specialCharExceptions = Arrays.asList('\'', '-', '/', '\\');
         this.sWords = 0;
         this.yWords = 0;
     }
@@ -27,7 +31,7 @@ public class LastLetterCount {
         word = word.trim();
         String dummyWord = "";
         for(int i = 0; i < word.length(); i++){
-            if(Character.isLetter(word.charAt(i))){
+            if(Character.isLetter(word.charAt(i)) || specialCharExceptions.contains(word.charAt(i))){
                 dummyWord += word.charAt(i);
                 if(i == word.length() - 1){
                     words.add(dummyWord);
