@@ -48,14 +48,14 @@ public class LastLetterCount {
         boolean foundFirstS = false;
         boolean foundFirstY = false;
         for(int i = 0; i < words.size(); i++){
-            if(words.get(i).charAt(words.get(i).length() - 1) == 's'){
+            if(Character.toLowerCase(words.get(i).charAt(words.get(i).length() - 1)) == 's'){
                 sWords ++;
                 if(!foundFirstS){
                     foundFirstS = true;
                     firstSIndex = i;
                 }
             }
-            if(words.get(i).charAt(words.get(i).length() - 1) == 'y'){
+            if(Character.toLowerCase(words.get(i).charAt(words.get(i).length() - 1)) == 'y'){
                 yWords ++;
                 if(!foundFirstY){
                     foundFirstY = true;
