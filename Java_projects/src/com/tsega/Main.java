@@ -1,6 +1,5 @@
 package com.tsega;
 
-import java.util.ArrayList;
 import java.util.Scanner;
 /*
 * @author = tsegatsahai
@@ -19,22 +18,22 @@ public class Main {
         Consonants consonants = new Consonants(phrase);
         LastLetterCount lastLetterCount = new LastLetterCount(phrase);
 
-        System.out.println("The number of vowels in '" + phrase + "' is: " + vowels.findVowels());
-
+        System.out.println("Number of vowels:\n\t---> " + vowels.findVowels());
+        System.out.println("Is it a palindrome? ");
         if(palindrome.isPalindrome()){
-            System.out.println("'" + phrase + "' is a palindrome");
+            System.out.println("\t---> Yes");
         }else {
-            System.out.println("'" + phrase + "' is not a palindrome");
+            System.out.println("\t---> No");
         }
 
-        System.out.println("The number of words in '" + phrase + "' is: " + word.numOfWords());
+        System.out.println("Number of words:\n\t---> " + word.numOfWords());
 
-        System.out.println("The number of consonants in '" + phrase + "' : " + consonants.numOfConsonants());
-        System.out.println("--> " + consonants.getNewWord());
+        System.out.println("Number of consonants:\n\t---> " + consonants.numOfConsonants());
+        System.out.println("\t---> " + consonants.getNewWord());
 
         System.out.println("Phrase after rearrangement:\n" + "\t---> "+ lastLetterCount.switchWords() );
-        System.out.println("Number of words that end with 's': " + lastLetterCount.getsWords());
-        System.out.println("Number of words that end with 'y': " + lastLetterCount.getyWords());
+        System.out.println("Number of words that end with 's':\n\t---> " + lastLetterCount.getsWords());
+        System.out.println("Number of words that end with 'y':\n\t---> " + lastLetterCount.getyWords());
 
 
     }
